@@ -1,4 +1,4 @@
-# TinProject — Longitudinal Brain Connectomics in Chronic Tinnitus
+# TinProject - Longitudinal Brain Connectomics in Chronic Tinnitus
 
 Analysis pipeline for tracking large-scale brain network reorganization during real-time fMRI neurofeedback treatment for chronic tinnitus.
 
@@ -57,33 +57,54 @@ TinProject/
 15. Participation coefficient clean.ipynb
     Positive and negative participation coefficient analyses
 ```
-
 ## Utils
 
-| File | Purpose |
-|------|---------|
-| `metrics.py` | Graph-metric functions (segregation, integration, normalized segregation) |
-| `metrics_yeo17.py` | Same metrics recomputed natively with Yeo-17 network labels |
-| `plotting.py` | Shared plotting helpers |
-| `matched_labels_exact.csv` | Schaefer-200 → Yeo-17 label mapping |
-| `matched_labels_exact_800.csv` | Schaefer-800 → Yeo-17 label mapping |
+```
+utils/
+├── metrics.py                  Segregation, integration, and normalized segregation
+├── metrics_yeo17.py            Yeo-17-specific metric computation
+├── plotting.py                 Shared visualization functions
+├── matched_labels_exact.csv    Schaefer-200 → Yeo-17 mapping
+└── matched_labels_exact_800.csv
+                                Schaefer-800 → Yeo-17 mapping
+```
 
 ## Methods overview
 
-**Parcellations:** Schaefer atlas (r100–r800); network assignments via Yeo-7 and Yeo-17.
+```
+Parcellation
+├── Schaefer atlas (100–800 parcels)
+└── Yeo-7 and Yeo-17 network assignments
 
-**Functional connectivity:** Pearson correlation (default), partial correlation, mutual information.
+Functional connectivity
+├── Pearson correlation
+├── Partial correlation
+└── Mutual information
 
-**Network metrics:**
-- `segregation` — mean within-network FC
-- `integration` — mean between-network FC
-- `participation_coefficient` — parcel-level cross-network integration
+Network metrics
+├── Segregation             Mean within-network FC
+├── Integration             Mean between-network FC
+└── Participation coefficient
+                            Parcel-level cross-network connectivity
 
-**Statistics:** Spearman correlation for trends, Wilcoxon signed-rank for paired comparisons, FDR correction (Benjamini-Hochberg), effect sizes as rank-biserial correlation.
+Statistics
+├── Spearman correlation
+├── Mann–Whitney U
+├── Wilcoxon signed-rank
+├── Linear mixed-effects models
+└── FDR correction (Benjamini–Hochberg)
+```
 
 ## Environment
 
-```
+```bash
 Python 3.x
-numpy, pandas, scipy, nilearn, matplotlib, seaborn
+
+numpy
+pandas
+scipy
+nilearn
+matplotlib
+seaborn
+statsmodels
 ```
