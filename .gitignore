@@ -1,0 +1,21 @@
+# Claude Code project instructions (local only)
+CLAUDE.md
+
+# Raw fMRI data — not committed (paths are local)
+Data/
+
+# Scratch notebooks
+justincase/
+
+# Windows artifacts
+*.url
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
