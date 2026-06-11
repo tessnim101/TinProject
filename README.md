@@ -25,87 +25,39 @@ TinProject/
 
 ## Notebooks
 
-## Analysis workflow
+## Analysis notebooks
 
-The notebooks follow the progression of the project from data loading to final statistical analysis.
+```
+1. TinLoading.ipynb                 Data loading and FC matrix construction
+2. TinDiving.ipynb                  Exploratory FC analyses (Pearson vs partial correlation)
 
-### 1. Data loading and exploratory analyses
+3. NF_initial_analysis.ipynb        Initial segregation/integration analyses
+4. rsfMRI.ipynb                     Resting-state network metrics
 
-- **1. TinLoading.ipynb**  
-  Loads Schaefer parcel-wise fMRI time series, computes Fisher z-transformed Pearson functional connectivity (FC) matrices, and aggregates them into Yeo-7 network-level FC matrices.
+6. Neurofeedback_ALL.ipynb          Main neurofeedback analysis pipeline
+6a. Data building.ipynb             Final dataset generation (+ negative PC)
+6b. Visualization.ipynb             Longitudinal visualizations
+6c. Statistical testing.ipynb       Trend analyses and clustering
+6d. Parcellation influence.ipynb    Robustness across Schaefer resolutions
+6e. The Run 7 dilemma.ipynb         Run 7 quality-control investigation
+6g. Visualization violin.ipynb      Distribution visualizations
 
-- **2. TinDiving.ipynb**  
-  Exploratory analysis of FC matrices, including partial-correlation (inverse covariance) connectivity and comparison with Pearson correlation.
+7a. Yeo17 Visualization.ipynb       Yeo-17 visualizations
+7b. Yeo17 800 Data building.ipynb   Yeo-17 metrics (Schaefer-800)
+7c. Yeo17 200 Data building.ipynb   Yeo-17 metrics (Schaefer-200)
 
-### 2. Resting-state connectivity analyses
+8. Fingerprinting.ipynb             Connectome fingerprinting analyses
 
-- **3. NF_initial_analysis.ipynb**  
-  First implementation of parcel-level segregation and integration metrics with network-level visualizations.
+10. Sampling.ipynb                  Feedback vs Transfer (Yeo-7)
+11. Sampling yeo 17.ipynb           Feedback vs Transfer (Yeo-17)
 
-- **4. rsfMRI.ipynb**  
-  Computes segregation, integration, and normalized segregation across resting-state runs and sessions.
+12. Linear model and trend lines.ipynb   Linear mixed-effects models
+14. Control Covariates.ipynb             Covariate-control analyses
 
-### 3. Neurofeedback metrics pipeline
+15. Participation coefficient clean.ipynb
+    Positive and negative participation coefficient analyses
+```
 
-- **6. Neurofeedback_ALL.ipynb**  
-  Core neurofeedback analysis pipeline. Computes segregation, integration, normalized segregation, and participation coefficient across all subjects and runs.
-
-- **6a. Data building.ipynb**  
-  Builds the main analysis dataset, adds negative participation coefficient, removes Run 7, and exports final CSV files.
-
-### 4. Visualization
-
-- **6b. Visualization.ipynb**  
-  Session-wise and subject-wise trajectories of network metrics.
-
-- **6g. Visualization violin.ipynb**  
-  Violin plots of network metrics across sessions.
-
-- **7a. Yeo17 Visualization.ipynb**  
-  Visualization of Yeo-17 network metrics.
-
-### 5. Statistical analyses
-
-- **6c. Statistical testing.ipynb**  
-  Spearman trend analyses, FDR correction, and subject clustering.
-
-- **10. Sampling.ipynb**  
-  Feedback vs. Transfer comparisons for Yeo-7 networks using KDE visualization and Mann–Whitney tests.
-
-- **11. Sampling yeo 17.ipynb**  
-  Same analyses applied to Yeo-17 networks.
-
-- **12. Linear model and trend lines.ipynb**  
-  Linear mixed-effects models for longitudinal changes.
-
-- **14. Control Covariates.ipynb**  
-  Sensitivity analyses controlling for global FC and condition effects.
-
-### 6. Parcellation and robustness analyses
-
-- **6d. Parcellation influence.ipynb**  
-  Evaluates robustness across Schaefer resolutions (100–800 parcels).
-
-- **6e. The Run 7 dilemma.ipynb**  
-  Investigates the influence of the anomalous Run 7.
-
-### 7. Yeo-17 data generation
-
-- **7b. Yeo17 800 Data building.ipynb**  
-  Computes Yeo-17 metrics on the Schaefer-800 atlas.
-
-- **7c. Yeo17 200 Data building.ipynb**  
-  Computes Yeo-17 metrics on the Schaefer-200 atlas.
-
-### 8. Connectome fingerprinting
-
-- **8. Fingerprinting.ipynb**  
-  Implements connectome fingerprinting, differential identifiability, PCA reconstruction, and network-specific identification analyses.
-
-### 9. Participation coefficient analyses
-
-- **15. Participation coefficient clean.ipynb**  
-  Computes positive and negative participation coefficients and aggregates results at parcel and network levels.
 ## Utils
 
 | File | Purpose |
