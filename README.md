@@ -1,15 +1,8 @@
-# TinProject - Longitudinal Brain Connectomics in Chronic Tinnitus
-
-Analysis pipeline for tracking large-scale brain network reorganization during real-time fMRI neurofeedback treatment for chronic tinnitus.
-
-## Background
-
-This project investigates how functional brain connectivity changes across longitudinal resting-state and neurofeedback fMRI sessions in patients with chronic tinnitus. The pipeline covers functional connectomics, graph-theoretical network metrics, and brain fingerprinting.
-
-Based on the NeuroTin trial reported in:
-> Gninenko et al. (2024). Functional MRI Neurofeedback Outperforms Cognitive Behavioral Therapy for Reducing Tinnitus Distress. *Radiology*, 310(2), e231143.
-
-## Repository structure
+## TinProject - Longitudinal Brain Connectomics in Chronic Tinnitus
+Analysis pipeline for characterizing functional brain network reorganization during rt-fMRI neurofeedback in chronic tinnitus.
+Based on the NeuroTin trial:
+> Gninenko et al. (2024). *Functional MRI Neurofeedback Outperforms Cognitive Behavioral Therapy for Reducing Tinnitus Distress*. Radiology, 310(2), e231143.
+### Repository structure
 
 ```
 TinProject/
@@ -22,10 +15,7 @@ TinProject/
 │   ├── figures/            ← exported 
 ```
 
-
-## Notebooks
-
-## Analysis notebooks
+### Analysis notebooks
 
 ```
 1. TinLoading.ipynb                 Data loading and FC matrix construction
@@ -57,7 +47,7 @@ TinProject/
 15. Participation coefficient clean.ipynb
     Positive and negative participation coefficient analyses
 ```
-## Utils
+### Utils
 
 ```
 utils/
@@ -69,7 +59,7 @@ utils/
                                 Schaefer-800 → Yeo-17 mapping
 ```
 
-## Methods overview
+### Methods overview
 
 ```
 Parcellation
@@ -95,7 +85,7 @@ Statistics
 └── FDR correction (Benjamini–Hochberg)
 ```
 
-## Environment
+### Environment
 
 ```bash
 Python 3.x
